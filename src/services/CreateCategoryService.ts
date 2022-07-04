@@ -1,4 +1,3 @@
-import {} from "typeorm"
 import { AppDataSource } from "../database/data-source";
 import { Category } from "../entities/Category";
 

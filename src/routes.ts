@@ -21,5 +21,7 @@ routes.get("/videos", new GetAllVideosController().handle)
 routes.put("/videos/:id", new UpdateVideoController().handle)
 routes.delete("/videos/:id", new DeleteVideoController().handle)
 
+routes.get("/",(req,res)=>{res.status(200).json("pagina inicial")})
+
 
 export { routes }

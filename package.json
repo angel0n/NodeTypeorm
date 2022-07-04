@@ -9,6 +9,8 @@
     "runmigrate": "ts-node-dev ./node_modules/typeorm/cli.js -d src/database/data-source.ts migration:run"
   },
   "dependencies": {
+    "@types/cors": "^2.8.12",
+    "cors": "^2.8.5",
     "express": "^4.18.1",
     "pg": "^8.7.3",
     "reflect-metadata": "^0.1.13",

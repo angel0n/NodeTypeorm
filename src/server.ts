@@ -22,4 +22,4 @@ app.use(Express.json())
 app.use(routes)
 app.use(cors())
 
-app.listen(3000,()=> console.log("Server run "))
+app.listen(process.env.PORT || 3000,()=> console.log("Server run "))

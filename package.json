@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "ts-node-dev --transpile-only src/server.ts",
     "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js ",
-    "runmigrate": "ts-node-dev ./node_modules/typeorm/cli.js -d src/database/data-source.ts migration:run"
+    "runmigrate": "ts-node-dev ./node_modules/typeorm/cli.js -d src/database/data-source.ts migration:run",
+    "start":"ts-node-dev --transpile-only src/server.ts"
   },
   "dependencies": {
     "@types/cors": "^2.8.12",

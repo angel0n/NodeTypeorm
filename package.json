@@ -7,7 +7,8 @@
     "dev": "ts-node-dev --transpile-only src/server.ts",
     "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js ",
     "runmigrate": "ts-node-dev ./node_modules/typeorm/cli.js -d src/database/data-source.ts migration:run",
-    "start":"ts-node-dev --transpile-only src/server.ts"
+    "build": "tsc --target es2021 --experimentalDecorators --emitDecoratorMetadata",
+    "start":"node dist/server.js"
   },
   "dependencies": {
     "@types/cors": "^2.8.12",

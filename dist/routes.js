@@ -1,0 +1,24 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.routes = void 0;
+//@ts-nocheck
+const express_1 = require("express");
+const CreateCategoryController_1 = require("./controllers/CreateCategoryController");
+const CreateVideoController_1 = require("./controllers/CreateVideoController");
+const DeleteCategoryController_1 = require("./controllers/DeleteCategoryController");
+const DeleteVideoController_1 = require("./controllers/DeleteVideoController");
+const GetAllCategoriesController_1 = require("./controllers/GetAllCategoriesController");
+const GetAllVideosController_1 = require("./controllers/GetAllVideosController");
+const UpdateCategoryController_1 = require("./controllers/UpdateCategoryController");
+const UpdateVideoController_1 = require("./controllers/UpdateVideoController");
+const routes = (0, express_1.Router)();
+exports.routes = routes;
+routes.post("/categories", new CreateCategoryController_1.CreateCategoryController().handle);
+routes.get("/categories", new GetAllCategoriesController_1.GetAllCategoriesController().handle);
+routes.delete("/categories/:id", new DeleteCategoryController_1.DeleteCategoryController().handle);
+routes.put("/categories/:id", new UpdateCategoryController_1.UpdateCategoryController().handle);
+routes.post("/videos", new CreateVideoController_1.CreateVideoController().handle);
+routes.get("/videos", new GetAllVideosController_1.GetAllVideosController().handle);
+routes.put("/videos/:id", new UpdateVideoController_1.UpdateVideoController().handle);
+routes.delete("/videos/:id", new DeleteVideoController_1.DeleteVideoController().handle);
+routes.get("/", (req, res) => { res.status(200).json("pagina inicial"); });
